@@ -9,7 +9,7 @@ suppressPackageStartupMessages(library(parallel))
 suppressPackageStartupMessages(library(zoo))
 # suppressPackageStartupMessages(library(sf))
 suppressPackageStartupMessages(library(sp))
-suppressPackageStartupMessages(library(rgeos))
+# suppressPackageStartupMessages(library(rgeos))
 suppressPackageStartupMessages(library(raster))
 
 # functions ---------------------------------------------------------------
@@ -296,6 +296,7 @@ simulate_track = function(platform,res=2.5,ymax,ymin,xmax,xmin){
   )
   
   # calculate travel distance
+  # LF: AS INPUT IS IN KM (XMAX ETX) THIS IS IN KM
   wpts$dist[2] = sqrt((wpts$x[2]-wpts$x[1])^2 + (wpts$y[2]-wpts$y[1])^2)
   
   # calculate transit time
